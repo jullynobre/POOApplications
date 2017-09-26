@@ -7,26 +7,26 @@
     <x>0</x>
     <y>0</y>
     <width>328</width>
-    <height>378</height>
+    <height>448</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:black;</string>
+   <string notr="true">background-color:white;</string>
   </property>
   <widget class="QToolButton" name="btn1">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>240</y>
+     <y>300</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -39,13 +39,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>100</y>
+     <y>160</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -58,13 +58,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>170</y>
+     <y>230</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -77,13 +77,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>170</y>
+     <y>230</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -96,13 +96,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>100</y>
+     <y>160</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -115,13 +115,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>170</y>
+     <y>230</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -134,13 +134,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>100</y>
+     <y>160</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -153,13 +153,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>240</y>
+     <y>300</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -172,13 +172,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>240</y>
+     <y>300</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -191,13 +191,13 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>310</y>
+     <y>370</y>
      <width>71</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color:rgb(90, 90, 90);
+    <string notr="true">background-color:black;
 font-size:40px;
 border:0;
 color: white;</string>
@@ -210,7 +210,7 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>100</y>
+     <y>160</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -229,7 +229,7 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>170</y>
+     <y>230</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -248,7 +248,7 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>240</y>
+     <y>300</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -267,7 +267,7 @@ color: white;</string>
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>310</y>
+     <y>370</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -282,12 +282,31 @@ color: white;</string>
     <string>-</string>
    </property>
   </widget>
+  <widget class="QToolButton" name="btndot">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>370</y>
+     <width>71</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(0, 0, 108);
+font-size:35px;
+border:0;
+color: white;</string>
+   </property>
+   <property name="text">
+    <string>.</string>
+   </property>
+  </widget>
   <widget class="QToolButton" name="btnclr">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>310</y>
-     <width>71</width>
+     <y>90</y>
+     <width>151</width>
      <height>61</height>
     </rect>
    </property>
@@ -301,11 +320,62 @@ color: white;</string>
     <string>CLR</string>
    </property>
   </widget>
-  <widget class="QToolButton" name="btnoff">
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>3</x>
+     <y>20</y>
+     <width>321</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">text-align:right;
+font-size:38px;
+padding-left:5px;
+border:0;</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>311</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btncalc">
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>310</y>
+     <y>90</y>
+     <width>151</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(0, 0, 75);
+font-size:40px;
+border:0;
+color: white;</string>
+   </property>
+   <property name="text">
+    <string>=</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="btndel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>370</y>
      <width>71</width>
      <height>61</height>
     </rect>
@@ -317,23 +387,7 @@ border:0;
 color: white;</string>
    </property>
    <property name="text">
-    <string>OFF</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>3</x>
-     <y>20</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:white;
-text-align:left;
-font-size:38px;
-padding-left:5px;</string>
+    <string>DEL</string>
    </property>
   </widget>
  </widget>
