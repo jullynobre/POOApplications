@@ -10,37 +10,79 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Calculator:
+    __instance = None
+
+    @staticmethod
+    def instance():
+        if not Calculator.__instance:
+            Calculator.__instance = Calculator()
+        return Calculator.__instance
+
     def __init__(self):
         self.n1 = ""
         self.n2 = ""
-        self.operator = 0
+        self.operator = ""
+        self.sol = ""
 
-    @staticmethod
-    def clicked_button(n):
-        pass
+    def clicked_button(self, n):
+        if self.operator == "":
+            self.n1 += n
+        else:
+            self.n2 += n
 
-    @staticmethod
-    def clicked_operation(op):
-        pass
+    def clicked_operation(self, op):
+        self.operator = op
+
+    def clear(self):
+        self.n1 = ""
+        self.n2 = ""
+        self.operator = ""
+
+    def calc(self):
+        print("op: ", self.operator)
+        print("n1: ", self.n1)
+        print("n2: ", self.n2)
+        if self.operator == "+":
+            self.sol = float(self.n1) + float(self.n2)
+        elif self.operator == "-":
+            self.sol = float(self.n1) - float(self.n2)
+        elif self.operator == "X":
+            self.sol = float(self.n1) * float(self.n2)
+        elif self.operator == "/":
+            self.sol = float(self.n1) / float(self.n2)
+        else:
+            self.sol = "Invalid Format"
+
+        self.n1 = ""
+        self.n2 = ""
+        if self.sol != "Invalid Format":
+            self.n1 = str(self.sol)
 
 
 class Ui_Form(object):
+
     def clicked_button(self, value):
+        calculator = Calculator.instance()
         self.textEdit.setPlainText(self.textEdit.toPlainText() + value)
-        Calculator.clicked_button(value)
+        calculator.clicked_button(value)
 
     def clicked_operation(self, value):
+        calculator = Calculator.instance()
         self.textEdit.setPlainText(self.textEdit.toPlainText() + value)
-        Calculator.clicked_operation(value)
+        calculator.clicked_operation(value)
 
     def clear(self):
-        print("clear")
+        calculator = Calculator.instance()
+        self.textEdit.setPlainText("")
+        calculator.clear()
 
     def delete(self):
         print("delete")
 
     def calc(self):
-        print("calc")
+        calculator = Calculator.instance()
+        calculator.calc()
+        self.textEdit.setPlainText(str(calculator.sol))
 
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -100,22 +142,22 @@ class Ui_Form(object):
         self.btndiv.setGeometry(QtCore.QRect(250, 160, 71, 61))
         self.btndiv.setStyleSheet("background-color:rgb(0, 0, 108);\n""font-size:40px;\n""border:0;\n""color: white;")
         self.btndiv.setObjectName("btndiv")
-        self.btndiv.clicked.connect(lambda: self.clicked_operation("div"))
+        self.btndiv.clicked.connect(lambda: self.clicked_operation("/"))
         self.btnmult = QtWidgets.QToolButton(Form)
         self.btnmult.setGeometry(QtCore.QRect(250, 230, 71, 61))
         self.btnmult.setStyleSheet("background-color:rgb(0, 0, 108);\n""font-size:40px;\n""border:0;\n""color: white;")
         self.btnmult.setObjectName("btnmult")
-        self.btnmult.clicked.connect(lambda: self.clicked_operation("mul"))
+        self.btnmult.clicked.connect(lambda: self.clicked_operation("X"))
         self.btnsun = QtWidgets.QToolButton(Form)
         self.btnsun.setGeometry(QtCore.QRect(250, 300, 71, 61))
         self.btnsun.setStyleSheet("background-color:rgb(0, 0, 108);\n""font-size:40px;\n""border:0;\n""color: white;")
         self.btnsun.setObjectName("btnsun")
-        self.btnsun.clicked.connect(lambda: self.clicked_operation("sum"))
+        self.btnsun.clicked.connect(lambda: self.clicked_operation("+"))
         self.btnsub = QtWidgets.QToolButton(Form)
         self.btnsub.setGeometry(QtCore.QRect(250, 370, 71, 61))
         self.btnsub.setStyleSheet("background-color:rgb(0, 0, 108);\n""font-size:40px;\n""border:0;\n""color: white;")
         self.btnsub.setObjectName("btnsub")
-        self.btnsub.clicked.connect(lambda: self.clicked_operation("sub"))
+        self.btnsub.clicked.connect(lambda: self.clicked_operation("-"))
         self.btndot = QtWidgets.QToolButton(Form)
         self.btndot.setGeometry(QtCore.QRect(10, 370, 71, 61))
         self.btndot.setStyleSheet("background-color:rgb(0, 0, 108);\n""font-size:35px;\n""border:0;\n""color: white;")
@@ -180,4 +222,3 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
-
