@@ -137,6 +137,11 @@ public class Calculator extends javax.swing.JFrame {
 
         btnDel.setText("DEL");
         btnDel.setPreferredSize(new java.awt.Dimension(51, 40));
+        btnDel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelActionPerformed(evt);
+            }
+        });
 
         jTextField.setEditable(false);
         jTextField.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -288,6 +293,10 @@ public class Calculator extends javax.swing.JFrame {
     private void btnDotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDotActionPerformed
         jTextField.setText(jTextField.getText() + ".");
     }//GEN-LAST:event_btnDotActionPerformed
+
+    private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
+        jTextField.setText(jTextField.getText().substring(0, jTextField.getText().length() - 1));
+    }//GEN-LAST:event_btnDelActionPerformed
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
