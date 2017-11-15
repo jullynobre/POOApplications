@@ -1,7 +1,10 @@
 package calculatorjava;
 
 public class Calculator extends javax.swing.JFrame {
-
+    private double n1 = 0.0;
+    private double n2 = 0.0;
+    private String operator = null;
+    
     public Calculator() {
         initComponents();
     }
@@ -121,19 +124,44 @@ public class Calculator extends javax.swing.JFrame {
 
         btnCalc.setText("=");
         btnCalc.setPreferredSize(new java.awt.Dimension(60, 60));
+        btnCalc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcActionPerformed(evt);
+            }
+        });
 
         btnSum.setText("+");
+        btnSum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumActionPerformed(evt);
+            }
+        });
 
         btnSub.setText("-");
         btnSub.setMaximumSize(new java.awt.Dimension(51, 35));
         btnSub.setMinimumSize(new java.awt.Dimension(51, 35));
         btnSub.setPreferredSize(new java.awt.Dimension(51, 40));
+        btnSub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubActionPerformed(evt);
+            }
+        });
 
         btnMul.setText("X");
         btnMul.setPreferredSize(new java.awt.Dimension(51, 40));
+        btnMul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMulActionPerformed(evt);
+            }
+        });
 
         btnDiv.setText("/");
         btnDiv.setPreferredSize(new java.awt.Dimension(51, 40));
+        btnDiv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDivActionPerformed(evt);
+            }
+        });
 
         btnDel.setText("DEL");
         btnDel.setPreferredSize(new java.awt.Dimension(51, 40));
@@ -297,6 +325,69 @@ public class Calculator extends javax.swing.JFrame {
     private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
         jTextField.setText(jTextField.getText().substring(0, jTextField.getText().length() - 1));
     }//GEN-LAST:event_btnDelActionPerformed
+
+    private void btnSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumActionPerformed
+        if(!jTextField.getText().isEmpty()){
+            n1 = Double.parseDouble(jTextField.getText());
+            operator = "+";
+            jTextField.setText("");
+        }
+    }//GEN-LAST:event_btnSumActionPerformed
+
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcActionPerformed
+        if(!jTextField.getText().isEmpty())
+            n2 = Double.parseDouble(jTextField.getText());
+        switch(operator){
+            case "+":
+                jTextField.setText(String.valueOf(n1 + n2));
+                n1 = n1 + n2;
+                n2 = 0.0;
+                operator = "";
+                break;
+            case "-":
+                jTextField.setText(String.valueOf(n1 - n2));
+                n1 = n1 - n2;
+                n2 = 0.0;
+                operator = "";
+                break;
+            case "*":
+                jTextField.setText(String.valueOf(n1 * n2));
+                n1 = n1 * n2;
+                n2 = 0.0;
+                operator = "";
+                break;
+            case "/":
+                jTextField.setText(String.valueOf(n1 / n2));
+                n1 = n1 / n2;
+                n2 = 0.0;
+                operator = "";
+                break;
+        }
+    }//GEN-LAST:event_btnCalcActionPerformed
+
+    private void btnSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubActionPerformed
+        if(!jTextField.getText().isEmpty()){
+            n1 = Double.parseDouble(jTextField.getText());
+            operator = "-";
+            jTextField.setText("");
+        }
+    }//GEN-LAST:event_btnSubActionPerformed
+
+    private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulActionPerformed
+        if(!jTextField.getText().isEmpty()){
+            n1 = Double.parseDouble(jTextField.getText());
+            operator = "*";
+            jTextField.setText("");
+        }
+    }//GEN-LAST:event_btnMulActionPerformed
+
+    private void btnDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivActionPerformed
+        if(!jTextField.getText().isEmpty()){
+            n1 = Double.parseDouble(jTextField.getText());
+            operator = "/";
+            jTextField.setText("");
+        }
+    }//GEN-LAST:event_btnDivActionPerformed
     
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
